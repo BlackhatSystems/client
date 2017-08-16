@@ -32,6 +32,7 @@ class Inbox extends PureComponent<void, Props, {rows: Array<any>}> {
     return index
       ? <Row
           conversationIDKey={item.conversationIDKey}
+          filter={this.props.filter}
           key={item.conversationIDKey || item.teamname}
           isActiveRoute={this.props.isActiveRoute}
           teamname={item.teamname}
