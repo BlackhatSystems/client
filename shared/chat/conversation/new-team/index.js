@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import * as React from 'react';
 import {Box, Button, HeaderHoc, Input, PopupDialog, Text} from '../../../common-adapters/index'
 import {isMobile} from '../../../constants/platform'
 import {globalColors, globalMargins, globalStyles} from '../../../styles'

@@ -36,7 +36,7 @@ type TopLineProps = {
   usernameColor: ?string,
 }
 
-class TopLine extends PureComponent<void, TopLineProps, void> {
+class TopLine extends PureComponent<TopLineProps, void> {
   render() {
     const {hasUnread, showBold, participants, subColor, timestamp, usernameColor} = this.props
     const height = isMobile ? 19 : 17
@@ -92,7 +92,7 @@ type BottomLineProps = {
   youNeedToRekey: boolean,
 }
 
-class BottomLine extends PureComponent<void, BottomLineProps, void> {
+class BottomLine extends PureComponent<BottomLineProps, void> {
   render() {
     const {participantNeedToRekey, youNeedToRekey, showBold, subColor, snippet, backgroundColor} = this.props
     let content
@@ -193,7 +193,7 @@ type AvatarProps = {
   backgroundColor: string,
 }
 
-class Avatars extends PureComponent<void, AvatarProps, void> {
+class Avatars extends PureComponent<AvatarProps, void> {
   render() {
     const {
       participants,
@@ -304,7 +304,7 @@ type Props = {
   youNeedToRekey: boolean,
 }
 
-class Row extends PureComponent<void, Props, void> {
+class Row extends PureComponent<Props, void> {
   render() {
     const props = this.props
     return (

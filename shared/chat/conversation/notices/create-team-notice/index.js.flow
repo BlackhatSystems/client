@@ -5,4 +5,4 @@ export type Props = {
   onShowNewTeamDialog: () => void,
 }
 
-export default class CreateTeamNotice extends Component<void, Props, void> {}
+export default class CreateTeamNotice extends Component<Props, void> {}

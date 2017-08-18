@@ -10,4 +10,4 @@ export type DispatchProps = {|
   _onShowNewTeamDialog: (conversationIDKey: Constants.ConversationIDKey) => void,
 |}
 
-export default class CreateTeamNotice extends Component<void, {}, void> {}
+export default class CreateTeamNotice extends Component<{}, void> {}

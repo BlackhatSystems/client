@@ -41,10 +41,10 @@ type TextType =
 
 type Props = {
   backgroundMode?: Background,
-  children?: React$Element<*>,
+  children?: React$Element<any>,
   className?: string,
   lineClamp?: number,
-  onClick?: ?(e: SyntheticEvent) => void,
+  onClick?: ?(e: SyntheticEvent<>) => void,
   onClickURL?: ?string,
   onPress?: void,
   onLongPress?: () => void,

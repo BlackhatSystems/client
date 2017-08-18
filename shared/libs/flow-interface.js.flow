@@ -171,13 +171,13 @@ declare interface MapADT5<K1, V1, K2, V2, K3, V3, K4, V4, K5, V5> {
 }
 
 declare module 'react-dom' {
-  declare function findDOMNode(componentOrElement: Element | ?React$Component<any, any, any>): any
+  declare function findDOMNode(componentOrElement: Element | ?React$Component<any, any>): any
 
   declare function render<Config>(
-    element: React$Element<Config>,
+    element: React$Element<React$ComponentType<Config>>,
     container: any,
     cb?: Function
-  ): React$Component<$DefaultPropsOf<Config>, $PropsOf<Config>, any>
+  ): React$Component<$PropsOf<Config>, any>
 
   declare function unmountComponentAtNode(container: any): boolean
   declare var version: string
@@ -191,9 +191,9 @@ declare module 'react-dom' {
     e: E
   ): void
   declare function unstable_renderSubtreeIntoContainer<Config>(
-    parentComponent: React$Component<any, any, any>,
-    nextElement: React$Element<Config>,
+    parentComponent: React$Component<any, any>,
+    nextElement: React$Element<React$ComponentType<Config>>,
     container: any,
     callback?: () => void
-  ): React$Component<$DefaultPropsOf<Config>, $PropsOf<Config>, any>
+  ): React$Component<$PropsOf<Config>, any>
 }

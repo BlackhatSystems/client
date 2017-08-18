@@ -25,7 +25,7 @@ const NoChats = () => (
   </Box>
 )
 
-class Inbox extends PureComponent<void, Props, {rows: Array<any>}> {
+class Inbox extends PureComponent<Props, {rows: Array<any>}> {
   state = {rows: []}
 
   _renderItem = ({item, index}) => {
