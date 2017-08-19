@@ -66,6 +66,8 @@
     "buffer": "5.0.6",
     "core-js": "2.4.1",
     "cross-env": "5.0.0",
+    "electron-notification-state": "git://github.com/felixrieseberg/electron-notification-state.git",
+    "electron-rebuild": "^1.6.0",
     "emoji-datasource": "3.0.0",
     "emoji-datasource-apple": "3.0.0",
     "emoji-mart": "1.0.0",

@@ -45,6 +45,7 @@ import type {ChangedFocus} from '../../constants/app'
 import type {TLFIdentifyBehavior} from '../../constants/types/flow-types'
 import type {SagaGenerator} from '../../constants/types/saga'
 import type {TypedState} from '../../constants/reducer'
+import {isSessionActive} from './index.platform'
 
 function* _incomingMessage(action: Constants.IncomingMessage): SagaGenerator<any, any> {
   switch (action.payload.activity.activityType) {
@@ -128,11 +129,12 @@ function* _incomingMessage(action: Constants.IncomingMessage): SagaGenerator<any
         const selectedConversationIDKey = yield select(Constants.getSelectedConversation)
         const appFocused = yield select(Shared.focusedSelector)
         const selectedTab = yield select(Shared.routeSelector)
+        const sessionActive = isSessionActive()
         const chatTabSelected = selectedTab === chatTab
         const conversationIsFocused =
           conversationIDKey === selectedConversationIDKey && appFocused && chatTabSelected
 
-        if (message && message.messageID && conversationIsFocused) {
+        if (message && message.messageID && conversationIsFocused && sessionActive) {
           yield call(ChatTypes.localMarkAsReadLocalRpcPromise, {
             param: {
               conversationID: incomingMessage.convID,
