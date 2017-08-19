@@ -2,6 +2,7 @@
 import React from 'react'
 import {Box, Button, Checkbox, Divider, Icon} from '../../../common-adapters'
 import {globalColors, globalMargins, globalStyles} from '../../../styles'
+import Notifications from './notifications/container'
 import Participants from './participants'
 
 import type {Props} from '.'
@@ -48,6 +49,8 @@ const InfoPanel = (props: Props) => (
         onClick={() => props.onShowBlockConversationDialog()}
       />
     </Box>
+
+    <Notifications desktop={'atmention'} mobile={'atmention'} onSetDesktop={null} onSetMobile={null} />
 
     <Divider style={{marginBottom: 20, marginTop: 20}} />
   </Box>
